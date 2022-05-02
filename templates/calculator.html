@@ -1,0 +1,31 @@
+{% include 'header.html' %}
+<br><br><br><br>
+<div class="container">
+<h1 style="text-align:center;">Calculator</h1>
+<form method="POST" class="col-sm-6">
+    {% csrf_token %}
+    <label for="text" ><b>Enter Number</b></label>
+    <input type="text" name="number1" class="form-control">
+
+    <label for="text"><b>Select Operator</b></label>
+    <select name="opr" class="form-control">
+        <option value="+"><b>+</b></option>
+        <option value="-"><b>-</b></option>
+        <option value="*"><b>*</b></option>
+        <option value="/"><b>/</b></option>
+    </select>
+
+    <label for="text" ><b>Enter Number</b></label>
+    <input type="text" name="number2" class="form-control">
+
+    <button type="submit" class="btn btn-primary">Calculate</button>
+    <button type="reset" class="btn btn-danger">Clear</button><br><br>
+    
+    <label for="text" name="Result" ><b>Result</b></label><br>
+    <input type="text" class="form-control" value="{{a}}"><br><br>
+    
+
+</form>
+</div>
+
+{% include 'footer.html' %}

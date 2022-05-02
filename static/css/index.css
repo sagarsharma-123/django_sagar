@@ -1,0 +1,36 @@
+.main-container1{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.foot1{
+    background-color:antiquewhite;
+    width: 100%;
+}
+.foot2{
+    display: inline;
+}
+footer ul{
+    display: inline-flex;
+}
+.foothead{
+    margin-inline: 100px;
+}
+a{
+    text-decoration: none;
+}
+.d1{
+    background-image: url(/static/images/11.jpg) ;
+}
+.d2{
+    background-color:orange;
+}
+.dot{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color:rgb(31, 231, 31);
+    display: inline-flex;
+
+}

@@ -1,0 +1,29 @@
+{% include 'header.html' %}
+<br><br><br>
+
+<div class="container">
+<h1 style="text-align: center;">Number-Guessing Game</h1>
+<p style="text-align: center; font-size: large;">(Enter Number Between <b>0</b> To <b>9</b>)</p>
+<form method="POST">
+    {% csrf_token %}
+
+<label><h4>Your Number</h4></label>
+<input type="text" name="N1" value="{{p1}}">
+<button type="submit" class="btn btn-primary btn-block">Submit</button>
+<button type="reset" class="btn btn-warning"><a href="{% url 'NumberGuessing' %}">Clear</a></button>
+<label for=""><h4>Computerised Random Number</h4></label>
+<input type="text" name="N2" value="{{p2}}">
+
+{% if p1 == '' %}
+<button type="button" class="btn btn-gray btn-lg"></button>
+{% elif p1 == p2 %}
+<button type="button" class="btn btn-success btn-lg">You Won</button>
+{% else %}
+<button class="btn btn-danger btn-lg">You Lose</button>
+{% endif %}
+</form>
+</div>
+
+
+<br><br><br>
+{% include 'footer.html' %}
